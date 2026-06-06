@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>confimr , prompt</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="output">
+      <div id="output-prompt">
+        <div class="field">
+          <label>نام شما هست:</label>
+          <p></p>
+        </div>
+        <div class="field">
+          <label>پاسخ شما هست:</label>
+          <p></p>
+        </div>
+        <div class="field">
+          <label>سن شما هست:</label>
+          <p></p>
+        </div>
+      </div>
+      <div id="output-confirm">
+        <div class="field">
+          <label>نوع داده ای که نام شماهست:</label>
+          <p></p>
+        </div>
+        <div class="field">
+          <label>نوع داده که ای پاسخ شما هست:</label>
+          <p></p>
+        </div>
+        <div class="field">
+          <label>نوع داده ای که سن شما هست:</label>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var yourName = prompt("نام خود را وارد کنید:");
+      var ask = confirm("آیا مطمئن هستید؟");
+      var yourFamily = prompt("سن خود را وارد کنید:");
+
+      var promptPs = document.querySelectorAll("#output-prompt p");
+      var confirmPs = document.querySelectorAll("#output-confirm p");
+
+      // نمایش مقدارها
+      promptPs[0].textContent = "نام شما هست: " + yourName;
+      promptPs[1].textContent = "پاسخ شما هست: " + ask;
+      promptPs[2].textContent = "سن شما هست: " + yourFamily;
+
+      // نمایش نوع داده‌ها (typeof)
+      confirmPs[0].textContent = "نوع نام: " + typeof yourName;
+      confirmPs[1].textContent = "نوع پاسخ: " + typeof ask;
+      confirmPs[2].textContent = "نوع سن: " + typeof yourFamily;
+    </script>
+  </body>
+</html>

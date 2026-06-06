@@ -1,0 +1,64 @@
+/* Reset اولیه برای حذف فاصله‌های پیش‌فرض مرورگر */
+* {
+  margin: 0; /* حذف margin پیش‌فرض */
+  padding: 0; /* حذف padding پیش‌فرض */
+  box-sizing: 0; /* ❌ اشتباه است (پایین توضیح دادم) */
+}
+
+/* کانتینر اصلی صفحه */
+#output {
+  height: 100vh; /* ارتفاع کل صفحه */
+  display: flex; /* فعال کردن flexbox */
+  flex-direction: column; /* چیدمان عمودی */
+  justify-content: center; /* وسط‌چین عمودی */
+  align-items: center; /* وسط‌چین افقی */
+  gap: 20px; /* فاصله بین دو بخش */
+  background-color: gray; /* رنگ پس‌زمینه */
+}
+
+/* بخش نمایش داده‌های ورودی */
+#output-prompt {
+  display: flex; /* چیدمان افقی */
+  justify-content: center; /* وسط‌چین افقی */
+  align-items: center; /* وسط‌چین عمودی */
+  gap: 60px; /* فاصله بین آیتم‌ها */
+  background-color: rgba(211, 0, 253, 0.3); /* پس‌زمینه نیمه شفاف */
+  width: 800px; /* عرض ثابت */
+  height: 200px; /* ارتفاع ثابت */
+  border-radius: 20px; /* گوشه‌های گرد */
+}
+
+/* هر فیلد (label + p) */
+.field {
+  display: flex; /* فعال کردن flex */
+  flex-direction: column; /* چیدمان ستونی (label بالا، p پایین) */
+  align-items: start; /* شروع از سمت چپ (در RTL راست) */
+  gap: 10px; /* فاصله بین label و p */
+}
+
+/* استایل label */
+.field label {
+  font-size: larger; /* بزرگ‌تر شدن فونت */
+  color: black; /* رنگ متن */
+}
+
+/* استایل مقدار داخل p */
+.field p {
+  background-color: black; /* پس‌زمینه مشکی */
+  color: red; /* رنگ متن قرمز */
+  padding: 20px 40px; /* فاصله داخلی بالا/پایین و چپ/راست */
+  font-size: large; /* اندازه فونت */
+  border-radius: 10px; /* گوشه گرد */
+}
+
+/* بخش نمایش نوع داده‌ها */
+#output-confirm {
+  display: flex; /* چیدمان افقی */
+  justify-content: center; /* وسط‌چین افقی */
+  align-items: center; /* وسط‌چین عمودی */
+  gap: 60px; /* فاصله بین آیتم‌ها */
+  background-color: rgba(211, 0, 253, 0.3); /* پس‌زمینه نیمه شفاف */
+  width: 800px; /* عرض ثابت */
+  height: 200px; /* ارتفاع ثابت */
+  border-radius: 20px; /* گوشه‌های گرد */
+}
